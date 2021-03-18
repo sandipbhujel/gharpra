@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -15,8 +17,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void onBtnClick(View view){
-        TextView txtHello = findViewById(R.id.txtDisplay);
-        EditText txtName = findViewById(R.id.txtName);
-        txtHello.setText("Hello ,"+txtName.getText().toString()+ " Welcome");
+        EditText txtName = findViewById(R.id.name);
+        EditText txtEmail = findViewById(R.id.email);
+        TextView txtShow = findViewById(R.id.show);
+        txtShow.setText("Hello, "+txtName.getText().toString()+ " Welcome to our site");
     }
 }
